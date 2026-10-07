@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Presensi Wajah</title>
+  <meta name="description" content="Presensi wajah berbasis template biometrik terenkripsi. Gambar wajah tidak pernah dikirim ke server.">
+  <!-- CSP: script hanya dari origin sendiri + jsDelivr (face-api.js, ber-SRI). connect-src: API presensi
+       + jsDelivr (bobot model). Samakan origin API dengan config.js. Jika konsol browser melaporkan
+       pelanggaran 'unsafe-eval' dari TensorFlow.js, tambahkan 'unsafe-eval' ke script-src. -->
+  <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' https://cdn.jsdelivr.net; style-src 'self' 'unsafe-inline'; img-src 'self' data: blob:; media-src 'self' blob:; connect-src 'self' https://presensi-api.piawai.workers.dev https://cdn.jsdelivr.net; object-src 'none'; base-uri 'self'; form-action 'none'">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header class="top"><strong>Presensi Wajah</strong><span id="who"></span></header>
+  <main id="app" aria-live="polite"></main>
+  <div id="toast" class="toast" hidden></div>
+  <script src="https://cdn.jsdelivr.net/npm/face-api.js@0.22.2/dist/face-api.min.js" integrity="sha384-gzn2n++arkvyhdNLmUf1s6F5NZ8iAbZ7FhIt+Zw7Jlf1n/vNTmZ3+cYr7S4ogyco" crossorigin="anonymous"></script>
+  <script src="config.js"></script>
+  <script src="api.js"></script>
+  <script src="face.js"></script>
+  <script src="app.js"></script>
+</body>
+</html>
