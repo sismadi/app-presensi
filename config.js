@@ -1,7 +1,7 @@
 // Satu-satunya berkas yang perlu disesuaikan saat deploy.
 // API_ORIGIN harus sama dengan origin Worker api-presensi DAN dengan connect-src CSP di index.html.
 const CONFIG = {
-    API_ORIGIN: 'https://presensi-api.piawai.workers.dev',
+    API_ORIGIN: 'https://presensi.piawai.workers.dev',
     // Bobot model face-api.js. Default: CDN. Untuk self-host: jalankan scripts/fetch-models.sh
     // lalu ganti ke './models' (dan hapus jsDelivr dari connect-src bila tak dipakai lagi).
     MODEL_URL: 'https://cdn.jsdelivr.net/gh/justadudewhohacks/face-api.js@master/weights',
