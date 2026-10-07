@@ -1,0 +1,43 @@
+{
+  "title": "Presensi Wajah: Sistem Presensi Kuliah Berbasis Pengenalan Wajah di Peramban",
+  "description": "<p><strong>Presensi Wajah</strong> is a face-recognition attendance system for university classes, developed at Universitas IPWIJA, Jakarta, Indonesia. It consists of two repositories: <strong>app-presensi</strong> (static frontend, no build step) and <strong>api-presensi</strong> (backend on Cloudflare Workers with a D1 database).</p><h3>Privacy-by-design</h3><ul><li>Face feature extraction (TinyFaceDetector &rarr; 68 landmarks &rarr; 128-D descriptor, via face-api.js) runs <strong>entirely in the browser</strong>.</li><li>Only the 128-number descriptor is sent; <strong>images and video are never uploaded or stored</strong>. Descriptors are stored encrypted on the server.</li><li>Explicit biometric consent and password confirmation are required for enrolment; users can delete their face data at any time.</li></ul><h3>Features</h3><ul><li><strong>Students:</strong> enrol / re-enrol / delete face data, attend with an active liveness challenge (blink, turn left, turn right), view attendance history.</li><li><strong>Lecturers:</strong> create classes, manage members (see who has not enrolled), open/close meetings with duration and late threshold, per-meeting report, manual override (excused/sick/absent with reason), CSV export protected against formula injection.</li><li><strong>Admins:</strong> statistics, account creation, role changes, password reset, face-template reset.</li></ul><h3>Technical stack</h3><ul><li><strong>Frontend:</strong> Vanilla JavaScript SPA, strict Content Security Policy, server data rendered via textContent, face-api.js loaded with Subresource Integrity.</li><li><strong>Backend:</strong> Cloudflare Workers, D1 (SQLite), session tokens, captcha on login/registration.</li></ul><h3>Limitations</h3><p>Liveness is evaluated on the client and therefore is not a hard security boundary. Automated tests so far use mocked face models; liveness thresholds (blink EAR, head-turn ratio) still need calibration on real devices and faces. See SECURITY.md in api-presensi.</p><h3>Repositories</h3><p><a href=\"https://github.com/sismadi/app-presensi\">https://github.com/sismadi/app-presensi</a><br><a href=\"https://github.com/sismadi/api-presensi\">https://github.com/sismadi/api-presensi</a></p>",
+  "tags": [
+    "presensi wajah",
+    "face recognition",
+    "face attendance",
+    "liveness detection",
+    "biometric privacy",
+    "face-api.js",
+    "cloudflare workers",
+    "cloudflare d1",
+    "vanilla javascript",
+    "single page application",
+    "educational technology",
+    "higher education",
+    "ipwija",
+    "indonesia"
+  ],
+  "categories": [
+    "Computer Science",
+    "Education",
+    "Software Engineering"
+  ],
+  "license": "MIT",
+  "defined_type": "software",
+  "authors": [
+    {
+      "name": "Wawan Sismadi",
+      "first_name": "Wawan",
+      "last_name": "Sismadi",
+      "orcid": "0009-0007-2685-5663",
+      "institution": "Universitas IPWIJA"
+    }
+  ],
+  "references": [
+    "https://github.com/sismadi/app-presensi",
+    "https://github.com/sismadi/api-presensi",
+    "https://presensi.piawai.id"
+  ],
+  "funding": "",
+  "version": "1.0.0"
+}

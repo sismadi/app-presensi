@@ -1,0 +1,34 @@
+Topic tags untuk sismadi/app-presensi dan sismadi/api-presensi
+Paste satu per satu di: GitHub repo → About (ikon roda gigi) → Topics
+
+─────────────────────────────────────────
+Untuk app-presensi:
+presensi
+face-recognition
+face-api
+liveness-detection
+attendance-system
+biometric-privacy
+vanilla-javascript
+single-page-application
+no-build
+educational-technology
+indonesia
+universitas-ipwija
+
+Untuk api-presensi:
+presensi
+attendance-system
+cloudflare-workers
+cloudflare-d1
+face-recognition
+biometric-privacy
+rest-api
+educational-technology
+indonesia
+universitas-ipwija
+─────────────────────────────────────────
+
+Catatan:
+- GitHub maksimal 20 topic tags per repo
+- Gunakan huruf kecil dan tanda hubung (kebab-case)

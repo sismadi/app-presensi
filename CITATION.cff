@@ -1,0 +1,44 @@
+cff-version: 1.2.0
+message: "If you use this software, please cite it as below."
+type: software
+title: "Presensi Wajah: Sistem Presensi Kuliah Berbasis Pengenalan Wajah di Peramban"
+abstract: >
+  Face-recognition attendance system for university classes, consisting of a static,
+  build-free frontend (app-presensi) and a Cloudflare Workers + D1 backend (api-presensi).
+  Face feature extraction (face-api.js: TinyFaceDetector, 68 landmarks, 128-D descriptor) runs
+  entirely in the browser; only the encrypted descriptor is stored on the server, never images
+  or video. Includes active liveness challenges (blink / turn left / turn right), explicit
+  biometric consent, role-based access (student, lecturer, admin), per-meeting reports with
+  manual override, and CSV export. Automated tests so far use mocked face models; calibration
+  with real cameras and faces is pending.
+authors:
+  - family-names: Sismadi
+    given-names: Wawan
+    orcid: "https://orcid.org/0009-0007-2685-5663"
+    affiliation: "Universitas IPWIJA, Jakarta"
+version: "1.0.0"
+date-released: "2026-10-07"
+# doi: "10.6084/m9.figshare.XXXXXXX"   # isi setelah DOI diterbitkan (hapus tanda #)
+license: MIT
+repository-code: "https://github.com/sismadi/app-presensi"
+url: "https://presensi.piawai.id"
+keywords:
+  - presensi wajah
+  - face recognition
+  - face attendance
+  - liveness detection
+  - biometric privacy
+  - face-api.js
+  - cloudflare workers
+  - vanilla javascript
+  - educational technology
+  - ipwija
+  - indonesia
+references:
+  - type: software
+    title: "api-presensi: Backend Presensi Wajah (Cloudflare Workers + D1)"
+    authors:
+      - family-names: Sismadi
+        given-names: Wawan
+    repository-code: "https://github.com/sismadi/api-presensi"
+    license: MIT
